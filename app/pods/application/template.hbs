@@ -1,5 +1,46 @@
-<h1>General Layout</h1>
-
-<img src='assets/quandl-logo.svg' atl="quandl logo">
-
+<header>
+    <nav class="navbar">
+        <div class="manu-bar">
+            <a class="nav-link" href="#"{{action "select"}}>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </a>
+        </div>
+        <div class="navbar-left">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="#"{{action "select"}}>ALTERNATIVE DATA</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="#"{{action "select"}}>CORE FINANCIAL DATA</a>
+                </li>
+            </ul>
+        </div>
+        <div class="navbar-logo">
+            <a class="nav-link" href="#"><img src='assets/quandl-logo.svg' atl="quandl logo"></a>
+        </div>
+        <div class="navbar-right">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="#"{{action "select"}}>DOCS & HELP</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#"{{action "select"}}>BLOG</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#"{{action "select"}}>BLOG</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="sub-header">
+        <div class="sub-header-content">
+            <img src="../assets/avatar.png" alt="avatar">
+            <span class="sub-title">Data Publisher</span>
+        </div>
+    </div>
+</header>
 {{outlet}}
+
+

@@ -1,0 +1,25 @@
+<div class="product">
+  <div class="product-header">
+    <span class="product-title">{{product.name}}</span>
+    <span class="product-link"><LinkTo @route="products.show" @model={{product.id}}>Expand</LinkTo></span>
+  </div>
+  <div class="product-table">
+    <table>
+    <tr>
+      {{#each-in product.productDataSubset.[1] as |key product|}}
+      <th> {{key}}</th>
+      {{/each-in}}
+    </tr>
+    {{#each product.productDataSubset as |data|}}
+    <tr>
+      {{#each-in data as |key value|}}
+      <td> {{value}}</td>
+      {{/each-in}}
+    </tr>
+    {{/each}}
+  </table>
+  </div>
+  <div class="produc-footer">
+    sample rows
+  </div>
+</div>
