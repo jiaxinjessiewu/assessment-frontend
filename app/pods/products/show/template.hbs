@@ -1,8 +1,49 @@
-<h3>Sub-Product Page</h3>
+<div class="show-data">
+  <div class="sub-header">
+      <div class="sub-header-content">
+          <img src="../assets/avatar.png" alt="avatar">
+          <span class="sub-title">Data Publisher</span>
+      </div>
+      <span>{{link-to 'Product page' 'products'}}</span>
+  </div>
+  <div class="data-title">
+    <h4>{{product.name}}</h4>
+    <div class="data-button">
+      <button class="coverage" {{action "select"}}>coverage</button>
+      <button class="download" {{action "select"}}>download</button>
+    </div>
+  </div>
+  <div class="data-body">
+    <div class="data-title">
+      <a class="nav-link" href="#"{{action "select"}}>data sample</a>
+      <a class="nav-link" href="#"{{action "select"}}>coverage</a>
+    </div>
+    <div class="data-table">
+      <table>
+        <tr>
+          <th></th>
+          {{#each-in productData.[1] as |key data|}}
+          <th> {{key}}</th>
+          {{/each-in}}
+        </tr>
+        {{#each productData as |data index|}}
+        <tr>
+          <td class="data-index">{{index}}</td>
+          {{#each-in data as |key value|}}
+          <td> {{value}}</td>
+          {{/each-in}}
+        </tr>
+        {{/each}}
+      </table>
+    </div>
+  </div>
+</div>
 
-{{link-to 'Product page' 'products'}}
-
+{{!-- {{link-to 'Product page' 'products'}} --}}
+{{!-- 
 <h4>{{product.name}}</h4>
+
+{{ product-data }}
 
 <table>
   {{#each productData as |data|}}
@@ -14,4 +55,4 @@
   {{/each}}
 </table>
 
-{{outlet}}
+{{outlet}} --}}

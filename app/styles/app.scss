@@ -135,6 +135,9 @@ body {
             border: 1px solid #d2d7dc;
             background-color: $white;
             margin: 25px 0;
+            box-shadow: 1px 1px 5px 0px rgb(0 0 0 / 0.1);
+            -webkit-box-shadow: 1px 1px 5px 0px rgb(0 0 0 / 0.1);
+            -moz-box-shadow: 1px 1px 5px 0px rgb(0 0 0 / 0.1);
             .product-header {
                 font-family: 'Quantico', sans-serif;
                 color:$dark_blue;
@@ -169,7 +172,17 @@ body {
                         height: 25px;
                     }
                 }
-                
+            }
+            .produc-footer {
+                background-color: $backgroun-color;
+                font-size: 12px;
+                font-weight: 700;
+                text-transform: uppercase;
+                color:$dark_blue;
+                p {
+                    padding: 10px;
+                    margin: 0;
+                }
             }
             
         }
@@ -199,6 +212,7 @@ body {
                 font-size: 18px;
                 font-weight: 300;
                 line-height: 22px;
+                margin: 0;
             }
         }
         .details-container {

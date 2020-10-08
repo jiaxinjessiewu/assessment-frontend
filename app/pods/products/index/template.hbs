@@ -3,19 +3,6 @@
     <h4 class="title">DATASETS IN THIS DATA PRODUCT</h4>
     {{#each products as |product|}}
     {{ product-set product = product }}
-      {{!-- <h5 class="product-title">{{product.name}}</h5>
-
-      <h5><LinkTo @route="products.show" @model={{product.id}}>Expand</LinkTo></h5>
-
-        <table>
-          {{#each product.productDataSubset as |data|}}
-            <tr>
-              <td>{{data.ticker}}</td>
-              <td>{{data.comp_name}}</td>
-              <td>{{data.per_end_date}}</td>
-            </tr>
-          {{/each}}
-        </table> --}}
     {{/each}}
   </div>
   <div class="data-overview">

@@ -1,3 +1,4 @@
+{{#if indexPage}}
 <header>
     <nav class="navbar">
         <div class="manu-bar">
@@ -29,7 +30,7 @@
                     <a class="nav-link" href="#"{{action "select"}}>BLOG</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#"{{action "select"}}>BLOG</a>
+                    <a class="nav-link" href="#"{{action "select"}}>SIGN IN</a>
                 </li>
             </ul>
         </div>
@@ -41,6 +42,7 @@
         </div>
     </div>
 </header>
+{{/if}}
 {{outlet}}
 
 
