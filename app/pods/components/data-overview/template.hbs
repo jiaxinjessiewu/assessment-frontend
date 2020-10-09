@@ -1,7 +1,25 @@
-<div class="detail-row">
-    <span class="details-table-title">
-        {{title}}
+<div class="data-overview">
+    <div class="tag">commercial data</div>
+    <div class="info">
+        <h4 class="title">data overview</h4>
+        <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus consectetur vero enim impedit itaque magni, minima quod nam harum. </p>
+    </div>
+    <div class="details-container">
+        {{#each-in publisher as |key data|}}
+        <div class="detail-row">
+            <span class="details-table-title">
+                {{formatPublisherTitle key}}
+                <i class="fa fa-info-circle"></i>
+            </span>
+            <span class="details-table-value">{{formatDate data}}</span>
+        </div>
+        {{/each-in}}
+    </div>
+    <div class="search-bar"> 
+        <div class="search-input">
+        <input type="text" placeholder="Tables API">
         <i class="fa fa-info-circle"></i>
-    </span>
-    <span class="details-table-value">{{value}}</span>
+        </div>
+        <button {{action "select" "pricing"}}>Pricing</button>
+    </div>
 </div>

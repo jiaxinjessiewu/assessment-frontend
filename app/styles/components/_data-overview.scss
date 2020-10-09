@@ -1,0 +1,98 @@
+.data-overview {
+    padding: 10px 20px;
+    vertical-align: text-bottom;
+    .tag {
+        color: $green;
+        font-weight: bold;
+        font-size: 12px;
+        padding: 5px;
+        border: 2px solid $green;
+        font-family: 'Quantico', sans-serif;
+        border-radius: 3px;
+        width: 33%;
+        text-transform: uppercase;
+    }
+    .info {
+        padding-bottom: 10px;
+        .title {
+            margin: 20px 0 10px;
+            font-size: 14px;
+            font-family: 'Quantico', sans-serif;
+            text-transform: uppercase;
+        }
+        .description {
+            font-size: 18px;
+            font-weight: 300;
+            line-height: 22px;
+            margin: 0;
+        }
+    }
+    .details-container {
+        .detail-row {
+            position: relative;
+            padding: 13px 0;
+            .details-table-title {
+                font-size: 13px;
+                color: $grey;
+                font-weight: bold;
+                text-transform: uppercase;
+                .fa-info-circle {
+                    color: $light_blue;
+                    font-size: 16px;
+                    padding-left: 5px;
+                }
+            }
+            .details-table-value {
+                position: absolute;
+                right: 0;
+                font-size: 16px;
+                font-family: 'Quantico', sans-serif;
+                color: $blue_green;
+                text-transform: capitalize;
+            }
+        }
+    }
+    .details-container > div {
+        border-bottom: 1px solid $light_grey; 
+    }
+    .details-container > :last-child {
+        border: none;
+    }
+    .search-bar {
+        margin: 20px 0;
+        .search-input {
+            position: relative;
+            padding-bottom: 30px;
+            input {
+                width: 95%;
+                color: $blue_green;
+                font-size: 16px;
+                padding: 8px;
+                border: 1px solid $light_blue;
+                &::placeholder {
+                    color: $blue_green;
+                    font-size: 16px;
+                }
+            }
+            .fa-info-circle {
+                color: $light_blue;
+                font-size: 16px;
+                position: absolute;
+                right: 5%;
+                top: 15%;
+            }
+        }
+        button {
+            text-transform: uppercase;
+            width: 100%;
+            background-color: $blue;
+            color: $white;
+            font-size: 16px;
+            font-family: 'Quantico', sans-serif;
+            padding: 8px 0;
+            border: none;
+            cursor: pointer;
+        }
+    }
+    
+}

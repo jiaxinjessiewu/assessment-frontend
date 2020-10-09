@@ -2,12 +2,12 @@ import Controller from '@ember/controller';
 import { alias } from '@ember/object/computed';
 
 export default Controller.extend({
-  publisher: alias('model.publisher'),
-  product: alias('model.product'),
-  productData: alias('product.data'),
-  actions: {
-    select: function() {
-      console.log("Button selected");
+  publisher   : alias('model.publisher'),
+  product     : alias('model.product'),
+  productData : alias('product.data'),
+  actions     : {
+    select: function(button) {
+      console.log(`${button} selected`)
     }
-  }
+}
 });

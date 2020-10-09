@@ -1,12 +1,14 @@
 <div class="main-data">
   <div class="data">
-    <h4 class="title">DATASETS IN THIS DATA PRODUCT</h4>
+    <h4 class="title">datasets in this data product</h4>
     {{#each products as |product|}}
-    {{ product-set product = product }}
+    {{ product-data 
+      name = product.name
+      id = product.id
+      product = product.productDataSubset 
+    }}
     {{/each}}
   </div>
-  <div class="data-overview">
-    {{ data-details }}
-  </div>
+  {{ data-overview publisher = publisher}}
 </div>
 

@@ -1,11 +1,33 @@
-<div class="data-table">
+<div class="product">
+  {{#if (eq page "index")}}
+  <div class="product-header">
+    <span class="product-title">{{name}}</span>
+    <span class="product-link"><LinkTo @route="products.show" @model={{id}}>Expand</LinkTo></span>
+  </div>
+  {{/if}}
+  <div class="product-table">
     <table>
-  {{#each productData as |data|}}
     <tr>
-      <td>{{data.ticker}}</td>
-      <td>{{data.comp_name}}</td>
-      <td>{{data.per_end_date}}</td>
+      {{#if (eq page "show")}}
+      <th></th>
+      {{/if}}
+      {{#each-in product.[1] as |key product|}}
+      <th> {{key}}</th>
+      {{/each-in}}
     </tr>
-  {{/each}}
-</table>
+    {{#each product as |data index|}}
+    <tr>
+      {{#if (eq page "show")}}
+      <td class="data-index">{{getRowIndex index}}</td>
+      {{/if}}
+      {{#each-in data as |key value|}}
+      <td> {{value}}</td>
+      {{/each-in}}
+    </tr>
+    {{/each}}
+  </table>
+  </div>
+  <div class="produc-footer">
+    <p>sample rows</p> 
+  </div>
 </div>

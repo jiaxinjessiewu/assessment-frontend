@@ -10,36 +10,20 @@
   <div class="data-title">
     <span>{{product.name}}</span>
     <div class="data-button">
-      <button class="coverage" {{action "select"}}>coverage</button>
-      <button class="download" {{action "select"}}>download<span>&#9660;</span></button>
+      <button class="coverage" {{action "select" "coverage"}}>coverage</button>
+      <button class="download" {{action "select" "download"}}>download<span>&#9660;</span></button>
     </div>
   </div>
   <div class="data-body">
     <div class="body-title">
-      <a class="nav-link active" href="#"{{action "select"}}>data sample</a>
-      <a class="nav-link" href="#"{{action "select"}}>coverage</a>
+      <a class="nav-link active" href="#"{{action "select" "data sample"}}>data sample</a>
+      <a class="nav-link" href="#"{{action "select" "coverage"}}>coverage</a>
     </div>
     <div class="data-table">
-      <table>
-        <tr>
-          <th></th>
-          {{#each-in productData.[1] as |key data|}}
-          <th> {{key}}</th>
-          {{/each-in}}
-        </tr>
-        {{#each productData as |data index|}}
-        <tr>
-          <td class="data-index">{{getRowIndex index}}</td>
-          {{#each-in data as |key value|}}
-          <td> {{value}}</td>
-          {{/each-in}}
-        </tr>
-        {{/each}}
-      </table>
+      {{ product-data 
+        product = productData 
+        page = "show" }}
     </div>
-  </div>
-  <div class="data-footer">
-    <p>sample rows</p>
   </div>
 </div>
 {{outlet}}

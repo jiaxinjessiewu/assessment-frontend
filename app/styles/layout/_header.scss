@@ -1,0 +1,95 @@
+.navbar {
+    background-color: $dark_blue;
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: block;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    padding: 0.4rem 1rem 0.2rem 1rem;
+    -webkit-font-smoothing: antialiased; 
+    .navbar-left {
+        width: 45%;
+    }
+    .navbar-right {
+        float: right;
+    }
+    .navbar-nav {
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+        flex-direction: row;
+        .nav-item {
+            padding: 20px 15px;
+            &.active {
+                background-color: $blue_green;
+            }
+        }
+    }
+    div {
+        display: inline-block;
+        vertical-align: middle;
+    }
+    a {
+        color: $white;
+        text-decoration: none;
+        font-size: 14px;
+        font-weight: 800;
+        text-transform: uppercase;
+        &:hover {
+            color: $white;
+        }
+    }
+    ul li {
+        display:inline;
+    }
+    
+    .manu-bar {
+        span {
+            display: block;
+            width: 1.8em;
+            height: 2px;
+            margin-bottom: 5px;
+            position: relative;
+            background-color: $white;
+            border-radius: 1px;
+            z-index: 1;
+            transform-origin: 4px 0px;
+            transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+            background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+            opacity 0.55s ease;
+            &:first-child {
+                transform-origin: 0% 0%;
+            }
+            &:nth-last-child(2) {
+                transform-origin: 0% 100%;
+            }
+        }
+    }
+}
+.sub-header {
+    background-color: $blue_green;
+    color: $white;
+    display: flex;
+    align-items: flex-start;
+    .sub-header-content {
+        padding: 15px 20px;
+        .sub-title {
+            font-family: 'Quantico', sans-serif;
+            font-size: 32px;
+            position: relative;
+            top: -15px;
+        }
+        img {
+            width: 55px;
+            padding-right: 10px;
+        }
+    }
+    
+}
